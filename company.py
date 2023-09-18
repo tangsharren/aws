@@ -63,14 +63,14 @@ def svLogin():
         expiration = 3600
 
         for student in student_records:
-            student_id = student[1]
+            student_id = student[3]
             student_urls = []
             object_prefix = str(student_id)
             
             # assuming the files are saved in this form at student page
             # eg/ 21WMR01091_com_acceptance_form.pdf
             #file1 = "stud-id-" + str(studId) + "_file1.pdf"
-            
+           
             for file_name in file_names:
                 object_key = "stud-id-" + str(object_prefix) + "_" + str(file_name) + ".pdf"
                
