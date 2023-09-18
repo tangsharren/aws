@@ -27,12 +27,6 @@
         padding: 14px 16px;
         text-decoration: none;
       }
-      #header {
-            float: left; /* Adjust the alignment as needed */
-            margin-right: 20px; /* Add some space between "Admin" and the button */
-            color: white;
-            font-size: 18px; /* Adjust the font size as needed */
-      }
       </style>
     
     <script type="application/ld+json">{
@@ -44,21 +38,16 @@
     <meta property="og:title" content="AdminPage">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body class="u-body u-xl-mode" data-lang="en">
- <header class="u-black u-clearfix u-header u-header" id="sec-519f">
-    <div class="u-clearfix u-sheet u-sheet-1">
-        {% if updateSuccessful %}
-        <script>
-            alert("Updated successfully.");
-        </script>
-        {% endif %}
-        <ul id="nav">
-            <!-- Wrap the "Admin" header and the logout button in a div -->
-            <div id="header">Admin</div>
-            <li style="float:right"><a id="link" href="/toAdminLogin">Logout</a></li>
-        </ul>
-    </div>
-</header>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-black u-clearfix u-header u-header" id="sec-519f"><div class="u-clearfix u-sheet u-sheet-1">
+       {% if updateSuccessful %}
+    <script>
+        alert("Updated successfully.");
+    </script>
+    {% endif %}
+	  <ul id="nav">
+      <li  style="float:right"><a id="link" href="/toAdminLogin">Logout</a></li>
+    </ul>
+      </div></header>
     <section class="skrollable u-clearfix u-parallax u-section-1" id="sec-729c">
       <div class="u-clearfix u-sheet u-sheet-1">
         <quillbot-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none;"></quillbot-extension>
