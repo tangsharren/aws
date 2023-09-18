@@ -126,21 +126,10 @@
             <tr style="height: 64px;">
               <td class="u-align-right u-table-cell u-table-cell-15"> </td>
               <td class="u-align-right u-table-cell u-table-cell-17">
-                {% if file_exist %}
-                <a href="{{ url }}"
-                  class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">
-                  Download</a>
-                {% endif %}
                 <form action="/companyUpload" method="POST" enctype="multipart/form-data">
                   <input type="text" name="companyEmail" value="{{company[1]}}" style="display:none">
-                  <!-- Place the "Choose File" button here -->
-                  <label for="company_File" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2">
-                    Choose File
-                  </label>
-                  <input type="file" name="company_File" id="company_File" style="display:none;">
-                  <br> <!-- Add a line break for spacing -->
-                  <!-- Place the "Upload" button below the "Choose File" button -->
-                  <input type="submit" value="Upload" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-3">
+                  <input type=file name="company_File" style="height:25px;font-size:14pt;color:grey;">
+                  <input type="submit" value="Upload">
                 </form>
               </td>
             </tr>
