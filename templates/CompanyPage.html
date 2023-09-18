@@ -126,7 +126,12 @@
             <tr style="height: 64px;">
               <td class="u-align-right u-table-cell u-table-cell-15"> </td>
               <td class="u-align-right u-table-cell u-table-cell-17">
-		<form action="/companyUpload" method="POST" enctype="multipart/form-data">
+                {% if file_exist %}
+                <a href="{{ url }}"
+                  class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">
+                  Download</a>
+                {% endif %}
+                <form action="/companyUpload" method="POST" enctype="multipart/form-data">
                   <input type="text" name="companyEmail" value="{{company[1]}}" style="display:none">
                   <!-- Place the "Choose File" button here -->
                   <label for="company_File" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2">
